@@ -28,6 +28,22 @@ def header_home():
     st.markdown(f"""
         <div style="display:flex; flex-direction:column; align-items:center; justify-content:center; margin-bottom:30px; margin-top:30px;">
             <img src="{logo_data_url}" alt="InstaAttendance Logo" style="height:100px;">
-            <h1 style="text-align:center; color:#E0E3FF;">Insta<br/>ATTENDANCE</h1>
+            <h1 style="text-align:center; color:#E0E3FF;">FlashCheck</h1>
         </div>
     """, unsafe_allow_html=True)
+
+
+def header_dashboard():
+    logo_data_url = get_image_base64()
+    
+    # If a file error happened, display it for debugging
+    if logo_data_url.startswith("Error"):
+        st.error(logo_data_url)
+        return
+
+    st.markdown(f"""
+        <div style="display:flex; align-items:center; justify-content:center; gap:10px;">
+            <img src="{logo_data_url}" alt="InstaAttendance Logo" style="height:80px;">
+            <h2 style="text-align:left; color:#5865F2;">Flash<br/>Check</h2>
+        </div>
+        """, unsafe_allow_html=True)

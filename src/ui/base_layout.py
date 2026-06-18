@@ -37,13 +37,13 @@ def style_base_layout():
                 @import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&display=swap');
                 /* Hide Top Bar of streamlit */
 
-                #MainMenu, footer, header {
-                    visibility: hidden;
-                }
+                # #MainMenu, footer, header {
+                #     visibility: hidden;
+                # }
 
-                .block-container {
-                    padding-top:2rem !important;
-                }
+                # .block-container {
+                #     padding-top:2rem !important;
+                # }
 
                 h1 {
                     font-family: "Black Ops One" !important; 
@@ -73,17 +73,17 @@ def style_base_layout():
                 transition: transform 0.25s ease-in-out !important;
                 
                 /* Default background color (Primary) */
-                background: #FF416C !important;
+                background-color: #5865F2 !important;
                 }
 
                 /* Secondary variant overrides only the background neon -- #FF5E62  pink --#FF416C */
                 button[kind="secondary"] {
-                background: #FF416C !important;
+                background-color: #FF416C !important;
                 }
 
                 /* Tertiary variant overrides only the background */
                 button[kind="tertiary"] {
-                background: black !important;
+                background-color: black !important;
                 }
 
                 button:hover{
