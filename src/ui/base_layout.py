@@ -37,13 +37,13 @@ def style_base_layout():
                 @import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&display=swap');
                 /* Hide Top Bar of streamlit */
 
-                # #MainMenu, footer, header {
-                #     visibility: hidden;
-                # }
+                #MainMenu, footer, header {
+                    visibility: hidden;
+                }
 
-                # .block-container {
-                #     padding-top:2rem !important;
-                # }
+                .block-container {
+                    padding-top:2rem !important;
+                }
 
                 h1 {
                     font-family: "Black Ops One" !important; 
