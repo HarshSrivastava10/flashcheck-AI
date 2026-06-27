@@ -12,10 +12,8 @@ def voice_attendance_dialog(selected_subject_id):
 
     audio_data = st.audio_input("Record classroom audio")
 
-    # Fixed parameter: changed width='stretch' to use_container_width=True
     if st.button('Analyze Audio', use_container_width=True, type='primary'):
         
-        # CRITICAL FIX: Ensure audio exists before processing
         if audio_data is None:
             st.error("Please record audio first before running the analysis!")
             return
@@ -37,7 +35,6 @@ def voice_attendance_dialog(selected_subject_id):
                 st.error('No enrolled students have voice profiles registered')
                 return
         
-            # Now safe to read because we verified audio_data is not None
             audio_bytes = audio_data.read()
 
             detected_scores = process_bulk_audio(audio_bytes, candidates_dict)
@@ -65,8 +62,7 @@ def voice_attendance_dialog(selected_subject_id):
                 })
                 
             st.session_state.voice_attendance_results = (pd.DataFrame(results), attendance_to_log)
-            # Optional: forces dialog to refresh and show results immediately
-            st.rerun() 
+            
     
     if st.session_state.get('voice_attendance_results'):
         st.divider()
